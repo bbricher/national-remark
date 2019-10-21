@@ -7,13 +7,8 @@ var index = require("../public/app.js")
 var db = require("../models");
 
 router.get("/", function(req, res) {
-    index.all(function(data) {
-        var hbsObject = {
-            article: data
-        };
-        console.log(hbsObject);
-        res.render("index");
-    }); 
+  res.render("index");
+  
 });
 
 router.get("/scrape", function(req, res) {
